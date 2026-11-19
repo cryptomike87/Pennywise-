@@ -36,6 +36,7 @@ describe('parseSidebarMenuItems', () => {
       { id: 'tags', hidden: true },
       { id: 'rules', hidden: false },
       { id: 'bank-sync', hidden: true },
+      { id: 'savings-insights', hidden: false },
     ];
 
     expect(parseSidebarMenuItems(JSON.stringify(saved))).toEqual(saved);
