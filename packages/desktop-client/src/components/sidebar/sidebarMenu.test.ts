@@ -17,6 +17,7 @@ describe('parseSidebarMenuItems', () => {
       { id: 'tags', hidden: true },
       { id: 'rules', hidden: true },
       { id: 'bank-sync', hidden: true },
+      { id: 'savings-insights', hidden: false },
     ]);
   });
 
@@ -53,7 +54,7 @@ describe('parseSidebarMenuItems', () => {
     expect(items.filter(item => item.id === 'reports')).toEqual([
       { id: 'reports', hidden: false },
     ]);
-    expect(items).toHaveLength(7);
+    expect(items).toHaveLength(8);
   });
 
   it('inserts missing pages at their default position', () => {
@@ -72,6 +73,7 @@ describe('parseSidebarMenuItems', () => {
       'tags',
       'rules',
       'bank-sync',
+      'savings-insights',
     ]);
     expect(items.find(item => item.id === 'reports')?.hidden).toBe(false);
     expect(items.find(item => item.id === 'payees')?.hidden).toBe(true);
