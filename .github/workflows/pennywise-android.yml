@@ -35,6 +35,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      - name: Test Savings Insights analysis
+        run: yarn workspace @actual-app/web test src/components/savings-insights/analysis.test.ts
+
       - name: Build mobile web bundle
         run: yarn build:browser --mobile
 
