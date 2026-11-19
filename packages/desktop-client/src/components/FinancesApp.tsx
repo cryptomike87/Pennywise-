@@ -283,14 +283,12 @@ export function FinancesApp() {
                     <Route
                       path="/savings-insights"
                       element={
-                        <SidebarMenuRoute id="savings-insights">
-                          <ErrorBoundary
-                            FallbackComponent={FeatureErrorFallback}
-                            resetKeys={[location.pathname]}
-                          >
-                            <SavingsInsights />
-                          </ErrorBoundary>
-                        </SidebarMenuRoute>
+                        <ErrorBoundary
+                          FallbackComponent={FeatureErrorFallback}
+                          resetKeys={[location.pathname]}
+                        >
+                          <SavingsInsights />
+                        </ErrorBoundary>
                       }
                     />
 
