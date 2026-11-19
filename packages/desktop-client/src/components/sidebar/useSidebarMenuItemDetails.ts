@@ -29,6 +29,7 @@ export function useSidebarMenuItemDetails(): Record<
   return {
     budget: { title: t('Budget'), Icon: SvgWallet },
     reports: { title: t('Reports'), Icon: SvgReports },
+    'savings-insights': { title: t('Savings Insights'), Icon: SvgReports },
     schedules: { title: t('Schedules'), Icon: SvgCalendar3 },
     payees: { title: t('Payees'), Icon: SvgUserGroup },
     tags: { title: t('Tags'), Icon: SvgTag },
