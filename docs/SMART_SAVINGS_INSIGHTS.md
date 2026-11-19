@@ -1,6 +1,6 @@
 # Smart Savings Insights
 
-## Purpose
+## Implementation status\n\nThe first implementation is in progress in `packages/desktop-client/src/components/savings-insights/`: deterministic dining, gaming, and subscription recognition; current/previous-month totals; percentage savings estimates; and a responsive Savings Insights page linked from desktop and mobile navigation. Unit tests cover calculation, transfers/refunds/split exclusion, and missing comparison baselines. Build and test validation are still pending.\n\n## Purpose
 
 Help Pennywise users understand discretionary spending patterns and find realistic ways to save. The feature analyzes transactions already in the user's budget and turns them into clear, explainable observations and optional savings ideas.
 
