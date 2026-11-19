@@ -40,14 +40,15 @@ packages/mobile-client/build/app-debug.apk
 
 The workflow `.github/workflows/pennywise-android.yml` builds the debug APK when code is pushed to an `android/*` branch, or when manually started from the Actions tab. The APK is uploaded as a workflow artifact for 14 days.
 
-## Planned Android work
+## Planned Android and product work
 
 1. Confirm clean build and install on a physical Android device.
 2. Verify local database persistence and offline transaction entry.
 3. Add native biometric unlock using Android BiometricPrompt.
 4. Improve Android navigation, edge-to-edge layout, and back-button behavior.
 5. Add native notifications and sharing where they improve the budgeting workflow.
-6. Establish a signed release build after choosing a secure signing process.
+6. Implement **Smart Savings Insights**: identify flexible-spending patterns such as dining out, gaming, subscriptions, and convenience purchases; compare them with the user's own history; and offer explainable, optional savings suggestions. See [SMART_SAVINGS_INSIGHTS.md](./SMART_SAVINGS_INSIGHTS.md).
+7. Establish a signed release build after choosing a secure signing process.
 
 ## Upstream and licensing
 
