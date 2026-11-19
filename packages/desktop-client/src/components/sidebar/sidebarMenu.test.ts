@@ -18,7 +18,6 @@ describe('parseSidebarMenuItems', () => {
       { id: 'tags', hidden: true },
       { id: 'rules', hidden: true },
       { id: 'bank-sync', hidden: true },
-      { id: 'savings-insights', hidden: false },
     ]);
   });
 
@@ -76,7 +75,6 @@ describe('parseSidebarMenuItems', () => {
       'tags',
       'rules',
       'bank-sync',
-      'savings-insights',
     ]);
     expect(items.find(item => item.id === 'reports')?.hidden).toBe(false);
     expect(items.find(item => item.id === 'payees')?.hidden).toBe(true);
