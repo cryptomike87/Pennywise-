@@ -37,6 +37,7 @@ import { NotificationsPage } from './news/NotificationsPage';
 import { Notifications } from './Notifications';
 import { MobilePageHeaderProvider, MobilePageHeaderSlot } from './Page';
 import { Reports } from './reports';
+import { SavingsInsights } from './savings-insights/SavingsInsights';
 import { NarrowAlternate, WideComponent } from './responsive';
 import { useMultiuserEnabled } from './ServerContext';
 import {
@@ -278,6 +279,20 @@ export function FinancesApp() {
                     <Route path="/" element={<StartPageRedirect />} />
 
                     <Route path="/reports/*" element={<Reports />} />
+
+                    <Route
+                      path="/savings-insights"
+                      element={
+                        <SidebarMenuRoute id="savings-insights">
+                          <ErrorBoundary
+                            FallbackComponent={FeatureErrorFallback}
+                            resetKeys={[location.pathname]}
+                          >
+                            <SavingsInsights />
+                          </ErrorBoundary>
+                        </SidebarMenuRoute>
+                      }
+                    />
 
                     <Route
                       path="/budget"
