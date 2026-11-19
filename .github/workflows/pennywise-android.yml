@@ -5,6 +5,15 @@ on:
   push:
     branches:
       - android/**
+    paths:
+      - 'packages/**'
+      - 'yarn.lock'
+      - 'package.json'
+      - '.github/workflows/pennywise-android.yml'
+
+concurrency:
+  group: pennywise-android-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
