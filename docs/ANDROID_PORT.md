@@ -47,7 +47,7 @@ The workflow `.github/workflows/pennywise-android.yml` builds the debug APK when
 3. Add native biometric unlock using Android BiometricPrompt.
 4. Improve Android navigation, edge-to-edge layout, and back-button behavior.
 5. Add native notifications and sharing where they improve the budgeting workflow.
-6. Implement **Smart Savings Insights**: identify flexible-spending patterns such as dining out, gaming, subscriptions, and convenience purchases; compare them with the user's own history; and offer explainable, optional savings suggestions. See [SMART_SAVINGS_INSIGHTS.md](./SMART_SAVINGS_INSIGHTS.md).
+6. Expand and validate **Smart Savings Insights**. The initial screen, transaction analysis, savings-rate simulator, mobile navigation entry, and calculation tests are in place. Remaining work includes build/test validation, better merchant/category customization, and savings-goal handoff. See [SMART_SAVINGS_INSIGHTS.md](./SMART_SAVINGS_INSIGHTS.md).
 7. Establish a signed release build after choosing a secure signing process.
 
 ## Upstream and licensing
