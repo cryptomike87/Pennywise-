@@ -22,7 +22,7 @@ import { useIsTestEnv } from '#hooks/useIsTestEnv';
 import { useScrollListener } from '#hooks/useScrollListener';
 
 const COLUMN_COUNT = 3;
-const ROW_COUNT = 2;
+const ROW_COUNT = 3;
 const PILL_HEIGHT = 15;
 const ROW_HEIGHT = 70;
 const TOTAL_HEIGHT = ROW_HEIGHT * ROW_COUNT;
@@ -119,6 +119,12 @@ export function MobileNavTabs() {
       path: '/reports',
       style: navTabStyle,
       Icon: SvgReports,
+    },
+    {
+      name: t('Savings'),
+      path: '/savings-insights',
+      style: navTabStyle,
+      Icon: SvgPiggyBank,
     },
     {
       name: t('Schedules'),

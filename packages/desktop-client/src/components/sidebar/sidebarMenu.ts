@@ -1,6 +1,7 @@
 export const SIDEBAR_MENU_ITEM_IDS = [
   'budget',
   'reports',
+  'savings-insights',
   'schedules',
   'payees',
   'tags',

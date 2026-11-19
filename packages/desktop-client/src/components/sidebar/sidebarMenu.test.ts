@@ -12,6 +12,7 @@ describe('parseSidebarMenuItems', () => {
     expect(parseSidebarMenuItems(undefined)).toEqual([
       { id: 'budget', hidden: false },
       { id: 'reports', hidden: false },
+      { id: 'savings-insights', hidden: false },
       { id: 'schedules', hidden: false },
       { id: 'payees', hidden: true },
       { id: 'tags', hidden: true },
@@ -35,6 +36,7 @@ describe('parseSidebarMenuItems', () => {
       { id: 'tags', hidden: true },
       { id: 'rules', hidden: false },
       { id: 'bank-sync', hidden: true },
+      { id: 'savings-insights', hidden: false },
     ];
 
     expect(parseSidebarMenuItems(JSON.stringify(saved))).toEqual(saved);
@@ -53,7 +55,7 @@ describe('parseSidebarMenuItems', () => {
     expect(items.filter(item => item.id === 'reports')).toEqual([
       { id: 'reports', hidden: false },
     ]);
-    expect(items).toHaveLength(7);
+    expect(items).toHaveLength(8);
   });
 
   it('inserts missing pages at their default position', () => {
@@ -66,6 +68,7 @@ describe('parseSidebarMenuItems', () => {
 
     expect(items.map(item => item.id)).toEqual([
       'reports',
+      'savings-insights',
       'schedules',
       'budget',
       'payees',
@@ -112,7 +115,9 @@ describe('parseSidebarStartPage', () => {
 });
 
 describe('moveSidebarMenuItem', () => {
-  const items = getDefaultSidebarMenuItems().slice(0, 3);
+  const items = getDefaultSidebarMenuItems().filter(item =>
+    ['budget', 'reports', 'schedules'].includes(item.id),
+  );
 
   it('moves a page before the target', () => {
     expect(

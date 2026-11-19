@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const baseConfig: CapacitorConfig = {
-  appId: 'org.actualbudget',
-  appName: 'Actual Budget',
+  appId: 'com.cryptomike87.pennywise',
+  appName: 'Pennywise',
   // Staged from the web build by `bin/stage-www.mjs` (run by the sync
   // scripts), which leaves out files the native apps do not need.
   webDir: 'www',
